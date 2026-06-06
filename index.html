@@ -1063,8 +1063,7 @@ ${sHead('🔭','Strategic Outlook')}
     const resp=await fetch('https://stately-beijinho-3ba016.netlify.app/.netlify/functions/send-report',{
       method:'POST',
       headers:{
-        'Content-Type':'application/json',
-        'Authorization':`Bearer ${SENDGRID_API_KEY}`
+        'Content-Type':'application/json'
       },
       body:JSON.stringify({
         personalizations:[{
