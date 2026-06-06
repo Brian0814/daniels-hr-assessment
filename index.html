@@ -6,6 +6,8 @@
 <title>HR Self-Assessment | Daniels Talent Solutions</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('nR4yRVqBN_hy1q5Eq');</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root {
@@ -264,7 +266,7 @@ body{font-family:'Open Sans',sans-serif;background:var(--gray-pale);color:var(--
       </div>
       <div class="form-grid full" style="margin-bottom:1rem">
         <div class="field">
-          <label>Organization website <span style="font-weight:400;color:var(--gray-400)">(optional — helps us write a more accurate report)</span></label>
+          <label>Organization website <span style="font-weight:400;color:var(--gray-400)">(optional)</span></label>
           <input type="url" id="f-website" placeholder="https://www.yourorganization.org">
         </div>
       </div>
@@ -772,7 +774,7 @@ function renderResults(scores,overall){
       <div style="font-size:36px;flex-shrink:0;line-height:1">📬</div>
       <div>
         <div style="font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;color:white;margin-bottom:6px">Your full report is on its way</div>
-        <p style="font-size:13px;color:rgba(255,255,255,0.88);line-height:1.75">The Daniels Talent Solutions team has received your full assessment report including executive narrative, deep-dive domain analysis, SWOT analysis, prioritized recommendations, and a detailed 90-day action plan. You will hear from us directly.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.88);line-height:1.75">The Daniels Talent Solutions team has received your full assessment report.</p>
         <p style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:10px">Questions? <a href="mailto:brian@danielssolutionsllc.com" style="color:rgba(255,255,255,0.85)">brian@danielssolutionsllc.com</a></p>
       </div>
     </div>
@@ -1171,8 +1173,8 @@ ${sHead('🔭','Strategic Outlook')}
 
   try{
     await emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_3yvnaob',
+      'template_0qyyrt9',
       {
         to_name:'Brian Johnson',
         to_email:'brian@danielssolutionsllc.com',
