@@ -946,9 +946,11 @@ async function sendFullReport(scores,overall){
         report_body:htmlReport
       }
     );
-    console.log('Full HTML report delivered to brian@danielssolutionsllc.com');
+console.log('Full HTML report delivered to brian@danielssolutionsllc.com');
+alert('SUCCESS - email sent!');
   }catch(err){
     console.error('EmailJS delivery error:',err);
+    alert('FAILED - error: ' + err.text + ' | status: ' + err.status);
   }
 }
 
