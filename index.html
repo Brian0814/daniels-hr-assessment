@@ -1057,11 +1057,10 @@ ${sHead('🔭','Strategic Outlook')}
 </html>`;
 
   // ── SEND VIA SENDGRID ────────────────────────────────────────────────────────
-  const SENDGRID_API_KEY='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';
   const FROM_EMAIL='brian@danielssolutionsllc.com';
 
   try{
-    const resp=await fetch('https://api.sendgrid.com/v3/mail/send',{
+    const resp=await fetch('https://stately-beijinho-3ba016.netlify.app/.netlify/functions/send-report',{
       method:'POST',
       headers:{
         'Content-Type':'application/json',
